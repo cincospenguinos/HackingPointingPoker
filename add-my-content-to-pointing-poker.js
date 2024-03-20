@@ -4,7 +4,7 @@
 // Better yet, minify this and then do that.
 const scriptsToLoad = [
 	'https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js',
-	'https://raw.githubusercontent.com/cincospenguinos/HackingPointingPoker/main/index.js',
+	'https://raw.githubusercontent.com/cincospenguinos/HackingPointingPoker/main/game.js',
 ];
 
 function loadAScript(index) {
