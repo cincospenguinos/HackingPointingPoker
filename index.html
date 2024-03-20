@@ -8,7 +8,6 @@
 <body>
 	<!--
 	TO DO:
-	    - Make the font papyrus
 	    - On consensus, have an airhorn sound appear
 	    - Get the game to appear in the right column (It's in $('.pointing-right-column'))
 	    - They have jquery, so take advantage of that
@@ -16,34 +15,13 @@
 	      would apply or remove whatever styling was set
 	-->
 	<p class="playerName">Style me</p>
-	<style>
-		body {
-			font-family:Papyrus, fantasy !important;
-		}
+	<link rel="stylesheet" type="text/css" href="styles.css" />
 
-		canvas {
-			margin: 100px;
-			border:1px solid black;
-		}
-
-		@keyframes p {
-			from {
-				background-color: blue;
-			}
-			to {
-				background-color: red;
-			}
-		}
-
-		.playerName:hover {
-			animation-name: p;
-			animation-duration: 2s;
-			animation-iteration-count: infinite;
-			color:white
-		}
-	</style>
-
-	<script src="add-my-content-to-pointing-poker.js"></script>
+	<!-- Solely for local development -->
+	<script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
 	<script src="game.js"></script>
+
+	<!-- Uncomment to check if the deployed version will work -->
+	<!-- <script src="add-my-content-to-pointing-poker.js"></script> -->
 </body>
 </html>

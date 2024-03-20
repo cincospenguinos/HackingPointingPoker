@@ -1,0 +1,29 @@
+/* styles.css
+
+Styles to add to pointing poker. Just stuff into a <style/> tag.
+*/
+
+body {
+	font-family: Comic Sans MS, fantasy !important;
+}
+
+canvas {
+	margin: 100px;
+	border:1px solid black;
+}
+
+@keyframes p {
+	from {
+		background-color: blue;
+	}
+	to {
+		background-color: red;
+	}
+}
+
+.playerName:hover {
+	animation-name: p;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	color:white
+}

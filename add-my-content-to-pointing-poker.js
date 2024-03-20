@@ -20,6 +20,6 @@ function loadAScript(index) {
 			scriptTag.innerHTML = arbitraryJs;
 			document.head.appendChild(scriptTag);
 		}).then(() => loadAScript(index + 1));
-}(0)
+}
 
 loadAScript(0);
