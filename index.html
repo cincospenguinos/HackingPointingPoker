@@ -16,27 +16,32 @@
 	      would apply or remove whatever styling was set
 	-->
 	<p class="playerName">Style me</p>
-	<style>body{font-family:Papyrus, fantasy !important;}canvas{margin: 100px;border:1px solid black;}@keyframes p{from{background-color: blue;}to{background-color:red;}}.playerName:hover{animation-name: p;animation-duration: 2s;animation-iteration-count: infinite;color:white}</style>
-	<script>
-	// We'll use the global window variable to ensure that only one instance is running at a time
-	if (!window.theCoolGameAndreMade) {
-		const phaserScript = document.createElement('script');
-		phaserScript.src = "https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js";
-	    phaserScript.addEventListener('load', () => {
-		    // This is how you get arbitrary javascript into the DOM
-			fetch('https://gist.githubusercontent.com/cincospenguinos/3692b4c1d92cf2d48ff2170647679cfd/raw/74daf11e9010e874f2735c243904d66ea6cb435e/goof.js')
-				.then((resp) => resp.text())
-				.then((resp) => {
-					const foo = document.createElement('script');
-					foo.innerHTML = resp;
-					document.addEventListener('load', () => {
-						console.log('Did it work?');
-					});
-					document.head.appendChild(foo);
-				});
-		});
-		document.head.appendChild(phaserScript);
-	}
-	</script>
+	<style>
+		body {
+			font-family:Papyrus, fantasy !important;
+		}
+
+		canvas {
+			margin: 100px;border:1px solid black;
+		}
+
+		@keyframes p {
+			from {
+				background-color: blue;
+			}
+			to {
+				background-color: red;
+			}
+		}
+
+		.playerName:hover {
+			animation-name: p;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			color:white
+		}
+	</style>
+
+	<script src="add-my-content-to-pointing-poker.js"></script>
 </body>
 </html>
